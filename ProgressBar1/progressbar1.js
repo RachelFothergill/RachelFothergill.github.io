@@ -13,6 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 20); // You can adjust this value to make the animation faster or slower
   }
 
-  animateProgressBar(25); // shows 25% progress
+  animateProgressBar(20); // shows 25% progress
 
 });
