@@ -1,8 +1,18 @@
-const progressBarFill = document.querySelector('.progress-bar-fill');
+document.addEventListener('DOMContentLoaded', function() {
+  const progressBarFill = document.querySelector('.progress-bar-fill');
 
-function updateProgressBar(progress) {
-  progressBarFill.style.width = `${progress}%`;
-}
+  function animateProgressBar(progress) {
+      let currentProgress = 0;
+      const progressInterval = setInterval(function() {
+          if (currentProgress >= progress) {
+              clearInterval(progressInterval);
+          } else {
+              currentProgress++;
+              progressBarFill.style.width = `${currentProgress}%`;
+          }
+      }, 20); // You can adjust this value to make the animation faster or slower
+  }
 
-// Example usage:
-updateProgressBar(25); // shows 25% progress
+  animateProgressBar(25); // shows 25% progress
+
+});
