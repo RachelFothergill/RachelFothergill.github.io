@@ -2,10 +2,17 @@
 #cost-benefit-form {
 width: 50%;
 margin: 0 auto;
-font-family: Arial, sans-serif;
+font-family: Segoe UI;
 }
 
 /* Style for the headings */
+h1 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 h2 {
 font-size: 18px;
 font-weight: bold;
