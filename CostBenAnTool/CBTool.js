@@ -13,4 +13,27 @@ costBenefitForm.addEventListener('submit', (event) => {
   const lifespan = parseFloat(document.getElementById('lifespan').value);
   const discountRate = parseFloat(document.getElementById('discount-rate').value) / 100;
 
-  const netPresentValue = calculateNPV
+  const netPresentValue = calculateNPV(initialCosts, recurringCosts, opportunityCosts, revenueGains, costSavings, implementationTime, lifespan, discountRate);
+
+  displayResult(netPresentValue, nonFinancialBenefits);
+});
+
+function calculateNPV(initialCosts, recurringCosts, opportunityCosts, revenueGains, costSavings, implementationTime, lifespan, discountRate) {
+  let npv = -initialCosts;
+  for (let i = 1; i <= lifespan * 12; i++) {
+    if (i <= implementationTime) {
+      npv += (revenueGains - costSavings - recurringCosts - opportunityCosts) / Math.pow(1 + discountRate, i / 12);
+    } else {
+      npv += (revenueGains - costSavings - recurringCosts) / Math.pow(1 + discountRate, i / 12);
+    }
+  }
+  return npv.toFixed(2);
+}
+
+function displayResult(npv, nonFinancialBenefits) {
+  let resultText = `Net Present Value: $${npv}`;
+  if (nonFinancialBenefits) {
+    resultText += `\n\nNon-Financial Benefits:\n${nonFinancialBenefits}`;
+  }
+  resultSection.textContent = resultText;
+}
