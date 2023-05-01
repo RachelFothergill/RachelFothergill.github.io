@@ -1,3 +1,5 @@
+// Wait for the DOM to be fully loaded before executing the code
+document.addEventListener('DOMContentLoaded', function() {
 // My personal OpenAI API key
 const openaiApiKey = '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';
 // Chatbot chosen to use
@@ -48,3 +50,4 @@ const sendInput = async () => {
 const submitButton = document.getElementById('submit-button');
 // Add an event listener to the submit button that calls the sendInput function when clicked
 submitButton.addEventListener('click', sendInput);
+}
