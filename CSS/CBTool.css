@@ -1,11 +1,9 @@
-/* Style for the form */
 #cost-benefit-form {
-width: 50%;
-margin: 0 auto;
-font-family: Segoe UI;
+  width: 50%;
+  margin: 0 auto;
+  font-family: Segoe UI;
 }
 
-/* Style for the headings */
 h1 {
   font-size: 30px;
   text-align: center;
@@ -15,61 +13,78 @@ h1 {
 }
 
 h2 {
-font-size: 18px;
-font-weight: bold;
-margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-/* Style for the labels */
 label {
-display: block;
-margin-top: 10px;
-font-size: 16px;
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
 }
 
-/* Style for the input fields */
 input[type="number"],
 textarea {
-padding: 10px;
-width: 100%;
-border-radius: 4px;
-border: 1px solid #ccc;
-box-sizing: border-box;
-font-size: 16px;
-margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  background: rgba(255,255,255,.1);
+  font-size: 15px;
+  margin-bottom: 15px;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #e8eeef;
+  color:#8a97a0;
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
 }
 
-/* Style for the calculate button */
+input[type="number"]:focus,
+textarea:focus {
+  background: #d2d9dd;
+}
+
 #calculate-button {
-background-color: #00208A;
-color: white;
-padding: 10px 20px;
-border: none;
-border-radius: 4px;
-cursor: pointer;
-font-size: 16px;
-margin-top: 15px;
-font-weight: bold;
-align-items: center;
+  position: relative;
+  display: block;
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  margin: 0 auto;
+  background: #1abc9c;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  width: 100%;
+  border: 1px solid #16a085;
+  border-width: 1px 1px 3px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-/* Style for the result section */
+#calculate-button:hover {
+  background: #109177;
+}
+
 #result-section {
   margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
-  background-color: #f2f2f2;
+  background-color: #00208A;
   border: 2px solid #0a2b50;
   border-radius: 20px;
   padding: 20px;
   text-align: center;
   font-family: Segoe UI, sans-serif;
+  color: #fff;
 }
 
-
-/* Style for error messages */
 .error-message {
-color: red;
-font-size: 14px;
-margin-bottom: 10px;
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
