@@ -5,14 +5,14 @@ document.addEventListener('DOMContentLoaded', function() {
   // Chatbot chosen to use
   const chatbotName = 'davinci'; 
   // Create an instance of the OpenAI API client
-  const openai = new OpenAI(openaiApiKey);
+  const openai = new OpenAI({ apiKey: openaiApiKey });
 
   // Define a function that takes user input and returns the chatbot's response
   const chatbot = async (input) => {
     // Set the prompt to the user's input
     const prompt = input;
     // Call the OpenAI API to get a response
-    const chatbotResponse = await openai.complete({
+    const chatbotResponse = await openai.completions.create({
       engine: chatbotName,
       prompt,
       maxTokens: 150,
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
       temperature: 0.7,
     });
     // Extract the response from the API's JSON output
-    const message = chatbotResponse.choices[0].text.trim();
+    const message = chatbotResponse.data.choices[0].text.trim();
     return message;
   };
 
