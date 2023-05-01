@@ -1,0 +1,18 @@
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+#result-section {
+  margin-top: 20px;
+  font-size: 1.2em;
+}

@@ -1,0 +1,44 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Cost Benefit Analysis</title>
+<!--Styling and animation scripts-->
+<link rel="stylesheet" type="text/css" href="..\CSS\CBTool.css"/>
+<script src="CBTool.js"></script>
+
+<!--Cost Benefit Analysis Tool-->
+<body>
+  <form id="cost-benefit-form">
+    <h2>Cost Inputs:</h2>
+    <label for="initial-costs">Initial Costs:</label>
+    <input type="number" id="initial-costs" name="initial-costs" step="0.01" required>
+
+    <label for="recurring-costs">Recurring Costs:</label>
+    <input type="number" id="recurring-costs" name="recurring-costs" step="0.01" required>
+
+    <label for="opportunity-costs">Opportunity Costs:</label>
+    <input type="number" id="opportunity-costs" name="opportunity-costs" step="0.01">
+
+    <h2>Benefit Inputs:</h2>
+    <label for="revenue-gains">Revenue Gains:</label>
+    <input type="number" id="revenue-gains" name="revenue-gains" step="0.01" required>
+
+    <label for="cost-savings">Cost Savings:</label>
+    <input type="number" id="cost-savings" name="cost-savings" step="0.01" required>
+
+    <label for="non-financial-benefits">Non-Financial Benefits:</label>
+    <textarea id="non-financial-benefits" name="non-financial-benefits"></textarea>
+
+    <h2>Time Inputs:</h2>
+    <label for="implementation-time">Implementation Time (in months):</label>
+    <input type="number" id="implementation-time" name="implementation-time" required>
+
+    <label for="lifespan">Expected Lifespan (in years):</label>
+    <input type="number" id="lifespan" name="lifespan" required>
+
+    <label for="discount-rate">Discount Rate (in %):</label>
+    <input type="number" id="discount-rate" name="discount-rate" value="5" required>
+
+    <button type="submit" id="calculate-button">Calculate NPV</button>
+
+    <div id="result-section"></div>
+  </form>
+</body>
