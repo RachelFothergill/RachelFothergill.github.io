@@ -35,7 +35,7 @@ textarea {
   margin-bottom: 15px;
   outline: none;
   background-color: #E2E9FF;
-  color:#E2E9FF;
+  color:#000000;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
 }
 
@@ -48,7 +48,7 @@ textarea:focus {
   position: relative;
   display: block;
   padding: 19px 39px 18px 39px;
-  color: #FFF;
+  color: #000000;
   margin: 0 auto;
   background: #00208A;
   font-size: 18px;
@@ -60,10 +60,12 @@ textarea:focus {
   margin-bottom: 10px;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
+  font-family: Segoe UI;
 }
 
 #calculate-button:hover {
-  background: #012AB0;
+  background: #011E64;
 }
 
 #result-section {
