@@ -3,8 +3,12 @@
 width: 50%;
 margin: 0 auto;
 font-family: Segoe UI;
-background-color: #002190;
 }
+
+body:not(#cost-benefit-form) {
+  background-color: darkblue;
+}
+
 
 /* Style for the headings */
 h1 {
