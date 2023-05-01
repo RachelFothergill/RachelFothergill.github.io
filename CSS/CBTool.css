@@ -48,7 +48,7 @@ textarea:focus {
   position: relative;
   display: block;
   padding: 19px 39px 18px 39px;
-  color: #000000;
+  color: #FFFFFF;
   margin: 0 auto;
   background: #00208A;
   font-size: 18px;
@@ -78,7 +78,7 @@ textarea:focus {
   padding: 20px;
   text-align: center;
   font-family: Segoe UI, sans-serif;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .error-message {
