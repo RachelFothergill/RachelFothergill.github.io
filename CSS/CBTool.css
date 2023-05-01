@@ -5,11 +5,6 @@ margin: 0 auto;
 font-family: Segoe UI;
 }
 
-body:not(#cost-benefit-form) {
-  background-color: darkblue;
-}
-
-
 /* Style for the headings */
 h1 {
   font-size: 30px;
@@ -46,7 +41,7 @@ margin-bottom: 15px;
 
 /* Style for the calculate button */
 #calculate-button {
-background-color: #4CAF50;
+background-color: #00208A;
 color: white;
 padding: 10px 20px;
 border: none;
@@ -54,6 +49,8 @@ border-radius: 4px;
 cursor: pointer;
 font-size: 16px;
 margin-top: 15px;
+font-weight: bold;
+align-items: center;
 }
 
 /* Style for the result section */
