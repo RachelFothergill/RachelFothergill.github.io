@@ -3,6 +3,7 @@
 width: 50%;
 margin: 0 auto;
 font-family: Segoe UI;
+background-color: #002190;
 }
 
 /* Style for the headings */
@@ -11,6 +12,7 @@ h1 {
   text-align: center;
   font-weight: bold;
   text-decoration: underline;
+  font-family: Segoe UI;
 }
 
 h2 {
