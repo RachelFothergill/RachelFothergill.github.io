@@ -55,10 +55,17 @@ align-items: center;
 
 /* Style for the result section */
 #result-section {
-margin-top: 20px;
-font-size: 18px;
-font-weight: bold;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #f2f2f2;
+  border: 2px solid #0a2b50;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  font-family: Segoe UI, sans-serif;
 }
+
 
 /* Style for error messages */
 .error-message {
