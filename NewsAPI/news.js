@@ -1,8 +1,5 @@
-//API News javascript
-
-//My personal api key
-const apiKey = '64zj2XYOYFsPCY0lkBmLERys4Ve1PzmYVEQsaq2_Pj8';
-const apiUrl = `https://api.newscatcherapi.com/v2/search?q=advancements%20in%20AI&lang=en`;
+const apiKey = 'e3ba8c76007e4316bc3827cd4915a2a4';
+const apiUrl = `https://newsapi.org/v2/everything?q=technology&apiKey=${apiKey}`;
 
 fetch(apiUrl)
   .then(response => response.json())
