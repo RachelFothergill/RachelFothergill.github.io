@@ -1,3 +1,6 @@
+//API News javascript
+
+//My personal api key
 const apiKey = 'e3ba8c76007e4316bc3827cd4915a2a4';
 const apiUrl = `https://newsapi.org/v2/everything?q=technology&apiKey=${apiKey}`;
 
