@@ -2,7 +2,7 @@
 
 //My personal api key
 const apiKey = '64zj2XYOYFsPCY0lkBmLERys4Ve1PzmYVEQsaq2_Pj8';
-const apiUrl = `https://api.newscatcherapi.com/v2/search?q=technology&lang=en&sort_by=relevancy`;
+const apiUrl = `https://api.newscatcherapi.com/v2/search?q=technology&lang=en&sort_by=relevancy&token=${apiKey}`;
 
 fetch(apiUrl)
   .then(response => response.json())
