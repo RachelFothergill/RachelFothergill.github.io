@@ -1,5 +1,5 @@
 const apiKey = '64zj2XYOYFsPCY0lkBmLERys4Ve1PzmYVEQsaq2_Pj8';
-const apiUrl = 'https://api.newscatcherapi.com/v2/search?q=Technology';
+const apiUrl = 'https://api.newscatcherapi.com/v2/search?q=innovations%20in%20computing';
 
 fetch(apiUrl, {
   headers: {
