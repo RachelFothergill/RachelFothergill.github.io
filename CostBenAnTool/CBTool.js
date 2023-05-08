@@ -26,25 +26,35 @@ form.addEventListener("submit", function(event) {
 
 // Calculate the net present value based on the input values
 function calculateNPV(initialCosts, recurringCosts, opportunityCosts, revenueGains, costSavings, implementationTime, lifespan, discountRate) {
-  let presentValue = -initialCosts; // Subtract initial costs from present value
+  // Subtract initial costs from present value and set as the initial present value
+  let presentValue = -initialCosts;
+  // Loop through each month of the lifespan
   for (let i = 1; i <= lifespan * 12; i++) {
+    // Calculate the cash flow for the current month by adding revenue gains and cost savings
     let cashFlow = costSavings + revenueGains;
+    // If the current month is before or during the implementation time, subtract recurring costs and opportunity costs from cash flow
     if (i <= implementationTime) {
       cashFlow -= recurringCosts + opportunityCosts;
-    } else {
+    } else { // Otherwise, only subtract recurring costs
       cashFlow -= recurringCosts;
     }
+    // Calculate the discounted cash flow for the current month and add it to the present value
     let discountedCashFlow = cashFlow / Math.pow(1 + discountRate, i / 12);
     presentValue += discountedCashFlow;
   }
+  // Return the net present value with 2 decimal places
   return presentValue.toFixed(2);
 }
 
 // Display the net present value on the page
 function displayResult(npv, nonFinancialBenefits) {
+  // Create a string that contains the calculated NPV
   let resultText = `<p>The calculated NPV is $${npv}.</p>`;
+  // If non-financial benefits were provided, add them to the result string
   if (nonFinancialBenefits) {
     resultText += `<p>Non-financial benefits: ${nonFinancialBenefits}</p>`;
   }
+  // Set the HTML content of the result section element to the result string
   resultSection.innerHTML = resultText;
 }
+
